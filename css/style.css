@@ -268,21 +268,27 @@ h4,
     margin-top: -56px;
 }
 
+.catA {
+    max-width: 49%;
+}
+
 .catalog {
-    max-width: 50%;
     display: inline-block;
     height: 220px;
-    padding: 6px;
+    object-fit: cover;
     width: 160px;
     position: relative;
     z-index: 1;
+    max-width: 100%;
 }
 
-.cat a {
+.catA {
+    margin-top: 6px;
     position: relative;
     display: inline-block;
 }
 
+.gallery-item::after,
 .cat a::after {
     content: "";
     position: absolute;
@@ -291,6 +297,12 @@ h4,
     right: 0;
     left: 0;
     background: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 30;
+}
+
+.cat a:hover::after {
     opacity: 1;
 }
 
@@ -359,8 +371,8 @@ h4,
 }
 
 .button:hover {
-    color: #000;
     transform: scale(1.1);
+    color: #fff;
 }
 
 .button-icon {
@@ -383,6 +395,8 @@ h4,
     width: 49%;
     display: inline-block;
     height: 142px;
+    position: relative;
+    transition: all 0.2s ease;
 }
 
 h5,
@@ -424,17 +438,96 @@ footer p {
     padding-top: 30px;
 }
 
-@media only screen and (max-width: 1400px) {}
+.gallery .gallery-item:hover {
+    transform: scale(1.1);
+}
 
-@media only screen and (max-width: 1200px) {}
+@media only screen and (max-width: 1850px) {
+    .collapse {
+        padding: 0 6rem;
+    }
+}
 
-@media only screen and (max-width: 991px) {}
+@media only screen and (max-width: 1650px) {
+    .navbar-brand {
+        top: 0.5rem;
+    }
+    .top-contact {
+        top: 0.5rem;
+    }
+    .navbar-nav {
+        padding-top: 8rem;
+    }
+    .hero-img {
+        margin-top: -130px;
+    }
+    .collapse {
+        padding: 0;
+    }
+}
 
-@media only screen and (max-width: 800px) {}
+@media only screen and (max-width: 1400px) {
+    .button {
+        padding: 0.5rem;
+        font-size: 1rem;
+    }
+    .button img {
+        display: none;
+    }
+    .catA {
+        max-width: 100%;
+    }
+    .gallery-item {
+        width: 100%;
+    }
+}
 
-@media only screen and (max-width: 767px) {}
+@media only screen and (max-width: 1222px) {
+    .navbar .navbar-nav li .nav-link {
+        font-size: 1rem;
+        padding: 0 0.25rem;
+    }
+    .mt h4 {
+        margin-top: 4rem;
+    }
+    h4.pt {
+        margin-top: 0;
+        display: block;
+        padding-top: 40px;
+    }
+    .button,
+    .button.mod {
+        max-width: 300px;
+        margin-left: 0;
+    }
+    .gallery-item {
+        width: auto;
+        margin-bottom: 3rem;
+    }
+}
 
-@media only screen and (max-width: 700px) {}
+@media only screen and (max-width: 1050px) {
+    .content p {
+        padding-right: 0;
+    }
+    .mw {
+        min-width: auto;
+        max-width: auto;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .navbar-toggler {
+        position: absolute;
+        top: 80px;
+        right: 27px;
+    }
+    .navbar-nav {
+        padding-top: 1rem;
+        background: #075ca2;
+        margin-top: 200px;
+    }
+}
 
 @media only screen and (max-width: 600px) {}
 
