@@ -517,6 +517,9 @@ footer p {
 }
 
 @media only screen and (max-width: 991px) {
+    .navbar .navbar-nav li .nav-link:hover::after {
+        opacity: 0;
+    }
     .navbar-toggler {
         position: absolute;
         top: 80px;
@@ -525,11 +528,19 @@ footer p {
     .navbar-nav {
         padding-top: 1rem;
         background: #075ca2;
-        margin-top: 200px;
+        text-align: center;
+    }
+    .navbar {
+        padding-top: 300px;
     }
 }
 
-@media only screen and (max-width: 600px) {}
+@media only screen and (max-width: 500px) {
+    .hero-img-description {
+        font-size: 18px;
+        margin-bottom: 2rem;
+    }
+}
 
 
 /* Magnific Popup CSS */
